@@ -1,0 +1,93 @@
+/* Fullscreen video container */
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Overlay for play/resume buttons (centered) */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Play & Resume Buttons */
+  .play-button,
+  .resume-button {
+    font-size: 100px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .play-button:hover,
+  .resume-button:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Bandersnatch-style choice bar */
+  .choices {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    z-index: 20;
+  }
+  
+  .choices button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  
+  .choices button:hover {
+    color: white;
+
+  }
+  
+  /* Fade-in animation for choices */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
